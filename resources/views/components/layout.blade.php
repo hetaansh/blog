@@ -26,7 +26,7 @@
                         <button class="text-xs font-bold uppercase">Welcome, {{ auth()->user()->name }}</button>
                     </x-slot>
                     <a href="/admin/posts/"
-                       class="block text-left px-3 text-sm loading-6 hover:bg-blue-500 focus:bg-blue-500 hover:text-white focus:text-white">All
+                       class="block text-left px-3 text-sm loading-6 hover:bg-blue-500 focus:bg-blue-500 hover:text-white focus:text-white  ">All
                         Post</a>
                     <a href="/admin/posts/create"
                        class="block text-left px-3 text-sm loading-6 hover:bg-blue-500 focus:bg-blue-500 hover:text-white focus:text-white">New

@@ -38,5 +38,5 @@ Route::resource('admin/posts' , AdminController::class)->middleware('can:isAdmin
 //Route::patch('admin/posts/{post}', [AdminController::class, 'update'])->middleware('can:isAdmin');
 //Route::delete('admin/posts/{post}', [AdminController::class, 'destroy'])->middleware('can:isAdmin');
 
-Route::get('plan', [SessionsController::class, 'plan']);
+
 

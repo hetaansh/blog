@@ -11,7 +11,7 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin.posts.index', [
-            'posts' => Post::paginate(50)
+            'posts' => Post::paginate(6)
         ]);
     }
 
@@ -53,8 +53,8 @@ class AdminController extends Controller
     {
         $attributes = request()->validate([
             'title' => 'required|max:255',
-            'body' => 'required|max:255',
-            'excerpt' => 'required|max:255',
+            'body' => 'required',
+            'excerpt' => 'required',
             'slug' => ['required', Rule::unique('posts', 'slug')->ignore($post->id)],
             'thumbnail' => 'image',
             'category_id' => 'required|exists:categories,id'

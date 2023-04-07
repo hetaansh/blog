@@ -49,4 +49,12 @@ class Post extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function getThumbnailAttribute($thumbnail)
+    {
+        if ($thumbnail) {
+            return asset('storage/' . $thumbnail);
+        }
+        return asset('images/illustration-3.png');
+    }
 }
